@@ -3921,7 +3921,7 @@
 			"iIiITIThm4iIiIjIJID/A+WilwJAHoLxAAAAAElFTkSuQmCC"
 		)
 	)
-	(text_box "Design calculations:\nFsw[kHz] = 100000/Rt[kR] = 100000/200 = 500kHz\n\nFor a 4.7uH inductor, the ripple current is as follows:\n∆IL = Vout*(Vin-Vout)/(Vin*L*fsw) = 5*(36-5)/(36*4.7x10^-6 * 500000) = 1.83A\n\nInductor peak current at full load:\nILpeak = Iload + ∆IL/2 = 3.5A + 1.83A/2 = 4.41A\n\nThis is below the thermal and saturation currents of the selected indcutor.\n\nOutput Ripple assuming an ESR of 0.1Ohm, and 60% of nominal output capacitor value due to DC bias:\n∆Vout = ∆IL * (ESR + (1/(8*fsw*COUT))) = 1.83 * ( 0.1 + (1 / (8*500kHz*26.4uF))) = 0.18V\n\nTransient load conditions, assume that the transient load change is 3.5A, the required inequality is satisfied for overshoot of 0.5V and undershoot of 0.1V with 26.4uF of effective output capacitance.\n\nCout > L*Itrans*Itrans / (∆Vover * Vout)       26.4 uF > 23.03 uF\nCout > L*Itrans*Itrans / (∆Vunder * (Vin - Vout))    26.4 uF > 18.57 uF"
+	(text_box "Design calculations:\nFsw[kHz] = 100000/Rt[kR] = 100000/200 = 500kHz\n\nFor a 4.7uH inductor, the ripple current is as follows:\n∆IL = Vout*(Vin-Vout)/(Vin*L*fsw) = 5*(36-5)/(36*4.7x10^-6 * 500000) = 1.83A\n\nInductor peak current at full load:\nILpeak = Iload + ∆IL/2 = 3.5A + 1.83A/2 = 4.41A\n\nThis is below the thermal and saturation currents of the selected indcutor.\n\nOutput Ripple assuming an ESR of 0.1Ohm, and 60% of nominal output capacitor value due to DC bias:\n∆Vout = ∆IL * (ESR + (1/(8*fsw*COUT))) = 1.83 * ( 0.1 + (1 / (8*500kHz*26.4uF))) = 0.2V\n\nTransient load conditions, assume that the transient load change is 3.5A, the required inequality is satisfied for overshoot of 0.5V and undershoot of 0.1V with 26.4uF of effective output capacitance.\n\nCout > L*Itrans*Itrans / (∆Vover * Vout)       26.4 uF > 23.03 uF\nCout > L*Itrans*Itrans / (∆Vunder * (Vin - Vout))    26.4 uF > 18.57 uF"
 		(exclude_from_sim no)
 		(at 13.97 156.845 0)
 		(size 161.29 40.005)
@@ -3940,10 +3940,10 @@
 		)
 		(uuid "04d2e534-007e-4740-8c58-0225ae1c9d83")
 	)
-	(text_box "The board is designed around the following controller and inductor:\n\nhttps://www.lcsc.com/product-detail/DC-DC-Converters_Diodes-Incorporated-AP64352SP-13_C2071665.html\nhttps://www.lcsc.com/product-detail/Inductors-SMD_SHOU-HAN-CYA0630-4-7UH_C5189748.html"
+	(text_box "The board is designed around the following controller and inductor. Generic components may be used for all other components:\n\nhttps://www.lcsc.com/product-detail/DC-DC-Converters_Diodes-Incorporated-AP64352SP-13_C2071665.html\nhttps://www.lcsc.com/product-detail/Inductors-SMD_SHOU-HAN-CYA0630-4-7UH_C5189748.html"
 		(exclude_from_sim no)
 		(at 13.335 38.735 0)
-		(size 111.76 21.59)
+		(size 111.76 12.065)
 		(stroke
 			(width 0)
 			(type default)
